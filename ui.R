@@ -52,7 +52,10 @@ shinyUI(fluidPage(
                       #Horizontal Rule
                       hr(),
                       
+                      
+                      
                       ),
+             
              #Sidebar layout setup underneath first set of nested columns
              sidebarLayout(
                sidebarPanel("side panel", width = 2,
@@ -65,9 +68,13 @@ shinyUI(fluidPage(
                  #Helptext underneath checkboxes inside of sidepanel
                  helpText("Help Text")
                ),
+               
                #Main panel for tab 2 with text output
                mainPanel("MainPanel",
+                         plotOutput("SecondPlot", height = "500px"),
                          textOutput("Text")
+               
+               
                )
              )
     )

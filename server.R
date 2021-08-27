@@ -41,6 +41,15 @@ function(input, output) {
       scale_fill_manual(values = c(tpalette)) + labs(fill = "Console Name")
     
   })
+
+  #create a variable for plots
+  y <- aggregate(console_Data$Sales, by=list(console_Data$Manufacturer), FUN=sum)
+  
+  #second page plot
+  output$SecondPlot <- renderPlot({
+    barplot(xlim = c(0, 800), y$x, names.arg = y$Group.1, col = "darkred", horiz = TRUE, las=1)
+  })
+  
   #Text output for second tab mainpanel
   output$Text <- renderText("Hello")
 }
