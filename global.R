@@ -1,5 +1,6 @@
 #Libraries used by the program
 library(shiny)
+library(shinythemes)
 library(tidyverse)
 library(randomcoloR)
 
