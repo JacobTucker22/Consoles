@@ -41,5 +41,6 @@ function(input, output) {
       scale_fill_manual(values = c(tpalette)) + labs(fill = "Console Name")
     
   })
+  #Text output for second tab mainpanel
   output$Text <- renderText("Hello")
 }
